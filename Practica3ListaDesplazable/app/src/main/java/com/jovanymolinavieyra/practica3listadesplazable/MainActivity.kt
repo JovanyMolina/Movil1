@@ -47,7 +47,7 @@ import androidx.compose.ui.unit.dp
 import com.JovanyMolinaVieyra.practica3listadesplazable.data.DataSource
 import com.JovanyMolinaVieyra.practica3listadesplazable.model.Topic
 import com.JovanyMolinaVieyra.practica3listadesplazable.ui.theme.CoursesTheme
-import com.example.courses.R
+import com.jovanymolinavieyra.practica3listadesplazable.R
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

@@ -2,7 +2,7 @@
 package com.JovanyMolinaVieyra.practica3listadesplazable.data
 
 import com.JovanyMolinaVieyra.practica3listadesplazable.model.Topic
-import com.example.courses.R
+import com.jovanymolinavieyra.practica3listadesplazable.R
 
 object DataSource {
     val topics = listOf(
