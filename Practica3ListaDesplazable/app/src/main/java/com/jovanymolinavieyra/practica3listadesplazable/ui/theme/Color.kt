@@ -2,11 +2,11 @@ package com.jovanymolinavieyra.practica3listadesplazable.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
+val primary_dark = Color(0xFFD0BCFF)
+val secondary_dark = Color(0xFFCCC2DC)
+val tertiary_dark = Color(0xFFEFB8C8)
 
-val md_theme_light_background = Color(0xFFFBFCFE)
-val md_theme_light_surfaceVariant = Color(0xFFE7E0EC)
-val md_theme_light_onSurfaceVariant = Color(0xFF49454f)
+val primary_light = Color(0xFF6650a4)
+val secondary_light = Color(0xFF625b71)
+val tertiary_light = Color(0xFF7D5260)
 
-val md_theme_dark_background = Color(0xFF191C1D)
-val md_theme_dark_surfaceVariant = Color(0xFF49454f)
-val md_theme_dark_onSurfaceVariant = Color(0xFFCAC4D0)

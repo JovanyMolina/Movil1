@@ -1,10 +1,9 @@
 package com.jovanymolinavieyra.practica3listadesplazable.data
 
 import com.jovanymolinavieyra.practica3listadesplazable.R
-import com.jovanymolinavieyra.practica3listadesplazable.model.Affirmation
 import com.jovanymolinavieyra.practica3listadesplazable.model.Topic
 
-class Datasource() {
+object Datasource {
     val topics = listOf(
         Topic(R.string.architecture, 58, R.drawable.architecture),
         Topic(R.string.crafts, 121, R.drawable.crafts),
