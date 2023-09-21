@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.example.courses
+package com.JovanyMolinaVieyra.practica3listadesplazable
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -44,10 +44,10 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.jovanymolinavieyra.practica3listadesplazable.R
-import com.jovanymolinavieyra.practica3listadesplazable.data.Datasource
-import com.jovanymolinavieyra.practica3listadesplazable.model.Topic
-import com.jovanymolinavieyra.practica3listadesplazable.ui.theme.CoursesTheme
+import com.JovanyMolinaVieyra.practica3listadesplazable.data.DataSource
+import com.JovanyMolinaVieyra.practica3listadesplazable.model.Topic
+import com.JovanyMolinaVieyra.practica3listadesplazable.ui.theme.CoursesTheme
+import com.example.courses.R
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -76,8 +76,8 @@ fun TopicGrid(modifier: Modifier = Modifier) {
         horizontalArrangement = Arrangement.spacedBy(dimensionResource(R.dimen.padding_small)),
         modifier = modifier
     ) {
-        items(Datasource.topics) {
-            TopicCard(it)
+        items(DataSource.topics) { topic ->
+            TopicCard(topic)
         }
     }
 }
