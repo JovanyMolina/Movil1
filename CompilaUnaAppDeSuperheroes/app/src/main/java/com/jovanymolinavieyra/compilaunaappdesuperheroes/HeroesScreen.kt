@@ -74,7 +74,6 @@ fun HeroesList(
         }
     }
 
-    // Fade in entry animation for the entire list
     AnimatedVisibility(
         visibleState = visibleState,
         enter = fadeIn(
@@ -89,7 +88,6 @@ fun HeroesList(
                     hero = hero,
                     modifier = Modifier
                         .padding(horizontal = 16.dp, vertical = 8.dp)
-                        // Animate each list item to slide in vertically
                         .animateEnterExit(
                             enter = slideInVertically(
                                 animationSpec = spring(
@@ -169,10 +167,6 @@ fun HeroesPreview() {
         Surface (
             color = MaterialTheme.colorScheme.background
         ) {
-            /* Important: It is not a good practice to access data source directly from the UI.
-            In later units you will learn how to use ViewModel in such scenarios that takes the
-            data source as a dependency and exposes heroes.
-            */
             HeroesList(heroes = HeroDataSource.heroes)
         }
     }

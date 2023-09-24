@@ -43,20 +43,12 @@ class MainActivity : ComponentActivity() {
                 TopAppBar()
             }
         ) {
-            /* Important: It is not a good practice to access data source directly from the UI.
-            In later units you will learn how to use ViewModel in such scenarios that takes the
-            data source as a dependency and exposes heroes.
-             */
             val heroes = HeroDataSource.heroes
             HeroesList(heroes = heroes, contentPadding = it)
         }
     }
 
-    /**
-     * Composable that displays a Top Bar with an icon and text.
-     *
-     * @param modifier modifiers to set to this composable
-     */
+
     @OptIn(ExperimentalMaterial3Api::class)
     @Composable
     fun TopAppBar(modifier: Modifier = Modifier) {
