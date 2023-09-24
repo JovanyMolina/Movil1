@@ -14,6 +14,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
+import com.example.superheroes.HeroesList
 import com.jovanymolinavieyra.compilaunaappdesuperheroes.model.HeroDataSource
 import com.jovanymolinavieyra.compilaunaappdesuperheroes.ui.theme.SuperheroesTheme
 
@@ -33,17 +34,22 @@ class MainActivity : ComponentActivity() {
             }
         }
     }
-
-
+    @OptIn(ExperimentalMaterial3Api::class)
     @Composable
     fun SuperheroesApp() {
-        Scaffold {
+        Scaffold(
             modifier = Modifier.fillMaxSize(),
             topBar = {
                 TopAppBar()
             }
+        ) {
+            /* Important: It is not a good practice to access data source directly from the UI.
+            In later units you will learn how to use ViewModel in such scenarios that takes the
+            data source as a dependency and exposes heroes.
+             */
+            val heroes = HeroDataSource.heroes
+            HeroesList(heroes = heroes, contentPadding = it)
         }
-
     }
 
     /**
